@@ -1,30 +1,30 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <img src="logo.png" alt="Logo"  class="d-inline-block align-text-top me-2 logo">
-        <span>PoPIT</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- Dropdown for Wallet -->
-        <div class="dropdown ms-auto">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="walletDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-          Wallet
+        <a class="navbar-brand" href="/">
+          <img src="logo.png" alt="Logo"  class="d-inline-block align-text-top me-2 logo">
+          <span>PoPIT</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <ul class="dropdown-menu" aria-labelledby="walletDropdown">
-          <li v-if="!walletAddress">
-            <a class="dropdown-item" href="#" @click="addWallet">Add Wallet Address</a>
-          </li>
-          <li v-else>
-            <a class="dropdown-item" href="#" @click="showWallet">Show Wallet</a>
-            <a class="dropdown-item" href="#" @click="removeWallet">Remove Wallet</a>
-          </li>
-        </ul>
-      </div>
-      </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Dropdown for Wallet -->
+          <div class="dropdown ms-auto">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="walletDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              Wallet
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="walletDropdown">
+              <li v-if="!walletAddress">
+                <a class="dropdown-item" href="#" @click="addWallet">Add Wallet Address</a>
+              </li>
+              <li v-else>
+                <a class="dropdown-item" href="#" @click="showWallet">Show Wallet</a>
+                <a class="dropdown-item" href="#" @click="removeWallet">Remove Wallet</a>
+              </li>
+            </ul>
+          </div>
+        </div>
     </div>
   </nav>
 
@@ -167,6 +167,10 @@ a span {
   padding-top: 20%;
    vertical-align: middle;
  }
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1); /* White icon */
+}
  
 @media (max-width: 767px) {
   .navbar .dropdown-menu {
