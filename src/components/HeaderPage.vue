@@ -168,6 +168,10 @@ a span {
    vertical-align: middle;
  }
  
+ .navbar-toggler-icon {
+   filter: brightness(0) invert(1); /* White icon */
+}
+
 @media (max-width: 767px) {
   .navbar .dropdown-menu {
     right: 10px; /* Add some space from the right edge on smaller screens */
