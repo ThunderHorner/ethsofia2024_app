@@ -1,4 +1,4 @@
-# eth-wallet
+# PoPIT-wallet
 
 ## Project setup
 ```
