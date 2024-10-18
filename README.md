@@ -1,4 +1,4 @@
-# eth-wallet-vue
+# eth-wallet
 
 ## Project setup
 ```
