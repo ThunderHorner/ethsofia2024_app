@@ -119,7 +119,7 @@ export default {
 <style scoped>
 
 .bg-light {
-  background-color: #19113d !important;
+  background-color: rgba(3,21,37,41) !important;
 }
 .container-fluid {
  padding: 20px;
@@ -167,10 +167,6 @@ a span {
   padding-top: 20%;
    vertical-align: middle;
  }
-
-.navbar-toggler-icon {
-  filter: brightness(0) invert(1); /* White icon */
-}
  
 @media (max-width: 767px) {
   .navbar .dropdown-menu {
