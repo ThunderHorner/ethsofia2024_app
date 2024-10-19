@@ -13,9 +13,9 @@
           <div class="card-body">
             <h5 class="card-title">{{ purchase.productName }}</h5>
             <p class="card-text">
-              <strong>Seller:</strong> {{ purchase.sellerName }}
-              <strong>Purchase Date:</strong> {{ new Date(Number(purchase.purchaseDate) * 1000).toLocaleString() }}<br>
-              <strong>Warranty Date:</strong> {{ purchase.warrantyDate }}<br>
+              <strong>Seller:</strong> {{ purchase.sellerName }}<br>
+              <strong>Purchase Date:</strong> {{ new Date(Number(purchase.purchaseDate) * 1000).toLocaleDateString('us-US') }}<br>
+              <strong>Warranty Date:</strong> {{ new Date(purchase.warrantyDate).toLocaleDateString('en-US') }}
               
             </p>
             <!-- View Details Button -->
@@ -43,7 +43,7 @@
             <p><strong>Seller Address:</strong> {{ selectedPurchase.seller }}</p>
             <p><strong>Price:</strong> {{ (parseInt(selectedPurchase.price) / 100).toFixed(2) }} {{ selectedPurchase.currency }}</p>         
             <p><strong>Purchase Date:</strong> {{ new Date(Number(selectedPurchase.purchaseDate) * 1000).toLocaleString() }}</p>
-            <p><strong>Warranty Date:</strong> {{ new Date(selectedPurchase.warrantyDate) }}</p>
+            <p><strong>Warranty Date:</strong> {{ new Date(selectedPurchase.warrantyDate).toLocaleDateString('en-US') }}</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" @click="closeDetails">Close</button>
@@ -80,7 +80,7 @@ export default {
 
       try {
         const provider = new JsonRpcProvider('https://hardhat.elunesoft.com'); // Your local node URL
-        const contractAddress = '0x1f10F3Ba7ACB61b2F50B9d6DdCf91a6f787C0E82'; // Replace with your contract address
+        const contractAddress = '0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0'; // Replace with your contract address
 
         const abi = [
           {

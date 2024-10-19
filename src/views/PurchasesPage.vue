@@ -77,7 +77,7 @@ export default {
 
       try {
         const provider = new JsonRpcProvider('https://hardhat.elunesoft.com'); // Your local node URL
-        const contractAddress = '0x959922bE3CAee4b8Cd9a407cc3ac1C251C2007B1'; // Replace with your contract address
+        const contractAddress = '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512'; // Replace with your contract address
 
         const abi = [
     {
